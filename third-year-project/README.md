@@ -20,6 +20,7 @@ cd backend
 npm install
 `
 
+### Edit db.js with your hostname, mysql username, and mysql password. Then run:
 `
 node server.js
 `

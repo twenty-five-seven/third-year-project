@@ -1,0 +1,42 @@
+# Large Language Models As Software Development Bots: A Case Study
+
+## Run Frontend
+(at root folder, run the commands below)
+
+`
+npm install
+`
+
+`
+npm run dev
+`
+
+## Run Backend
+`
+cd backend
+`
+
+`
+npm install
+`
+
+`
+node server.js
+`
+
+## Run Tests
+(make sure you already ran "npm install" inside /backend first.
+
+`
+cd backend
+`
+
+### Run Unit Tests
+`
+npm test
+`
+
+### Run Integration Test
+`
+npm run test:file -- backend/__tests__/integration/checkout.test.js 
+`

@@ -1,0 +1,78 @@
+@startuml usecasediagram
+actor Seller
+actor Buyer
+
+left to right direction
+
+package "User Management" {
+    usecase "Register" as UC1
+    usecase "Log In" as UC2
+    usecase "Log Out" as UC3
+}
+
+package "Product Management" {
+    usecase "Add Product" as UC4
+    usecase "Edit Product" as UC5
+    usecase "Delete Product" as UC6
+    usecase "Categorize Product" as UC7
+    usecase "Upload Product Image" as UC8
+    usecase "Set Product Price" as UC9
+}
+
+package "Order Management" {
+    usecase "Add to Cart" as UC10
+    usecase "Place Order" as UC11
+    usecase "View Orders" as UC12
+    usecase "Update Order Status" as UC13
+}
+
+package "Payment Processing" {
+    usecase "Make Payment" as UC14
+    usecase "Receive Payment" as UC15
+}
+
+package "Customer Interaction" {
+    usecase "Leave Review" as UC16
+    usecase "Respond to Inquiry" as UC17
+    usecase "Message Seller" as UC18
+}
+
+package "Search and Filtering" {
+    usecase "Search Product" as UC19
+    usecase "Filter Product" as UC20
+}
+
+package "User Dashboard" {
+    usecase "View Dashboard" as UC21
+    usecase "View Order History" as UC22
+    usecase "Track Order Status" as UC23
+}
+
+Seller -> UC1
+Seller -> UC2
+Seller -> UC3
+Seller -> UC4
+Seller -> UC5
+Seller -> UC6
+Seller -> UC7
+Seller -> UC8
+Seller -> UC9
+Seller -> UC12
+Seller -> UC13
+Seller -> UC15
+Seller -> UC17
+Seller -> UC21
+
+Buyer -> UC1
+Buyer -> UC2
+Buyer -> UC3
+Buyer -> UC10
+Buyer -> UC11
+Buyer -> UC14
+Buyer -> UC16
+Buyer -> UC18
+Buyer -> UC19
+Buyer -> UC20
+Buyer -> UC22
+Buyer -> UC23
+@enduml

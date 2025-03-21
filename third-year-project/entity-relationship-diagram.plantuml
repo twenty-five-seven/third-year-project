@@ -1,0 +1,85 @@
+@startuml erd
+
+entity User {
+    * id : String
+    * name : String
+    * email : String
+    * password : String
+}
+
+entity Seller {
+    * id : String
+    * name : String
+    * email : String
+    * password : String
+}
+
+entity Buyer {
+    * id : String
+    * name : String
+    * email : String
+    * password : String
+}
+
+entity Product {
+    * id : String
+    * name : String
+    * description : String
+    * price : double
+    * category : String
+}
+
+entity Order {
+    * id : String
+    * buyer_id : String
+    * seller_id : String
+    * status : String
+}
+
+entity Payment {
+    * id : String
+    * order_id : String
+    * amount : double
+    * method : String
+}
+
+entity Review {
+    * id : String
+    * buyer_id : String
+    * product_id : String
+    * rating : int
+    * comment : String
+}
+
+entity Inquiry {
+    * id : String
+    * buyer_id : String
+    * seller_id : String
+    * message : String
+}
+
+entity Cart {
+    * buyer_id : String
+}
+
+entity Image {
+    * id : String
+    * product_id : String
+    * url : String
+}
+
+User ||--o{ Seller : "1"
+User ||--o{ Buyer : "1"
+Seller ||--o{ Product : "1"
+Buyer ||--o{ Cart : "1"
+Product ||--o{ Image : "1"
+Order ||--o{ Product : "many"
+Order ||--o{ Buyer : "1"
+Order ||--o{ Seller : "1"
+Payment ||--o{ Order : "1"
+Review ||--o{ Buyer : "1"
+Review ||--o{ Product : "1"
+Inquiry ||--o{ Buyer : "1"
+Inquiry ||--o{ Seller : "1"
+
+@enduml

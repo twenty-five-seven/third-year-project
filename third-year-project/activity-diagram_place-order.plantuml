@@ -1,0 +1,26 @@
+@startuml activitydiagram
+
+|Buyer|
+start
+:Select Product;
+:View Product Details;
+:Click "Add to Cart";
+:View Cart;
+:Click "Place Order";
+
+|Order Service|
+:Create Order;
+:Update Order Status to "Processing";
+
+|Payment Service|
+:Process Payment;
+:Update Order Status to "Paid";
+
+|Order Service|
+:Update Order Status to "Shipped";
+
+|Buyer|
+:Receive Order Confirmation;
+stop
+
+@enduml

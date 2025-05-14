@@ -4,11 +4,15 @@ const mysql = require('mysql2');
 let currentDbPromise = null;
 let currentDbName = 'ecommerce';  // Changed hyphen to underscore
 
+let host = 'localhost';
+let user = 'sqluser';
+let password = 'sqlpassword';
+
 // First create a connection without specifying a database
 const initialConnection = mysql.createConnection({
-  host: 'replace-by-your-host',
-  user: 'replace-by-your-user',
-  password: 'replace-by-your-user-password-for-sql'
+  host: host,
+  user: user,
+  password: password,
 });
 
 // Create the database if it doesn't exist
@@ -33,9 +37,9 @@ const setupDatabase = (dbName) => {
       
       // Create a new connection with the database specified
       const connection = mysql.createConnection({
-        host: 'replace-by-your-host',
-        user: 'replace-by-your-user',
-        password: 'replace-by-your-user-password-for-sql',
+        host: host,
+        user: user,
+        password: password,
         database: sanitizedDbName
       });
       

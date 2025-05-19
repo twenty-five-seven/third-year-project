@@ -1,5 +1,7 @@
 # Large Language Models As Software Development Bots: A Case Study
 
+![alt text](https://github.com/twenty-five-seven/third-year-project/blob/main/homepage.png)
+
 ## Run Frontend
 (at root folder, run the commands below)
 
